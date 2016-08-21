@@ -10,6 +10,15 @@ namespace Testability
     {
         static void Main(string[] args)
         {
+            var order = new Order
+            {
+                DatePlaced = DateTime.Now,
+                TotalCost = 100m
+            };
+
+            var orderProcessor = new OrderProcessor();
+
+            orderProcessor.Process(order);
         }
     }
 }
