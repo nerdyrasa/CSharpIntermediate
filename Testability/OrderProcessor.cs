@@ -4,14 +4,14 @@ namespace Testability
 {
     public class OrderProcessor
     {
-        private readonly ShippingCalculator _shippingCalculator;
+        // Example of loose coupling
 
-        public OrderProcessor()
+        private readonly IShippingCalculator _shippingCalculator;
+
+        public OrderProcessor(IShippingCalculator shippingCalculator)
         {
-            _shippingCalculator = new ShippingCalculator();
+            _shippingCalculator = shippingCalculator;
         }
-
-
 
         public void Process(Order order)
         {

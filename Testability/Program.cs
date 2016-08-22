@@ -16,7 +16,7 @@ namespace Testability
                 TotalCost = 100m
             };
 
-            var orderProcessor = new OrderProcessor();
+            var orderProcessor = new OrderProcessor(new ShippingCalculator());
 
             orderProcessor.Process(order);
         }

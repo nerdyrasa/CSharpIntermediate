@@ -2,7 +2,12 @@
 
 namespace Testability
 {
-    public class ShippingCalculator
+    public interface IShippingCalculator
+    {
+        decimal CalculateShipping(Order order);
+    }
+
+    public class ShippingCalculator : IShippingCalculator
     {
         public decimal CalculateShipping(Order order)
         {
