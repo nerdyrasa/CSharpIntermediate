@@ -24,5 +24,15 @@ namespace Extensibility
             _logger = logger;
         }
 
+        public void Migrate()
+        {
+            _logger.LogInfo("Migration started at " + DateTime.Now);
+
+            // Details of migration
+
+            _logger.LogInfo("Migration finished at " + DateTime.Now);
+
+        }
+
     }
 }
