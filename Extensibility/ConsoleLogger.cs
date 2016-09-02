@@ -12,12 +12,19 @@ namespace Extensibility
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
+            ResetConsoleColor();
         }
 
         public void LogInfo(string message)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(message);
+            ResetConsoleColor();
+        }
+
+        private void ResetConsoleColor()
+        {
+            Console.ForegroundColor = ConsoleColor.Black;
         }
     }
 }
