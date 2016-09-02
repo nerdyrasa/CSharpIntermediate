@@ -11,10 +11,14 @@ namespace Extensibility
         static void Main(string[] args)
         {
             // In the constructor, specify a concrete implementation of the interface. 
-            Console.WriteLine("Start program");
-            var dbMigrator = new DbMigrator(new ConsoleLogger());
+
+            // var dbMigrator = new DbMigrator(new ConsoleLogger());
+
+            // Now, we can simply change the behavior by passing in a different implementation of ILogger
+
+            var dbMigrator = new DbMigrator(new FileLogger("C:\\projects\\log.txt"));
+
             dbMigrator.Migrate();
-            Console.WriteLine("End program");
         }
     }
 }
